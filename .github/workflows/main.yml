@@ -11,8 +11,6 @@ jobs:
       - name: Cypress evaluator step
         id: cypress
         uses: betrybe/cypress-evaluator-action@master
-        env:
-          TEST_REPOSITORY_BRANCH: feature/configure-tests
       - name: Store evaluation step
         uses: betrybe/store-evaluation-action@master
         with:
