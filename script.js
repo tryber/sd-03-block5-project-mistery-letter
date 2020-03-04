@@ -1,6 +1,7 @@
 const inputCarta = document.getElementById('carta-texto');
 const botaoCarta = document.getElementById('criar-carta');
 const pCarta = document.getElementById('carta-gerada');
+const estilo = []
 
 function addCarta() {
     let arrayCarta = inputCarta.value.split(" ");
