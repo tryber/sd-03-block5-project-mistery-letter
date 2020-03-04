@@ -27,7 +27,10 @@ function addCarta() {
         pCarta.appendChild(span);
     }
     contador.innerHTML = 'Total de palavras: ' + arrayCarta.length;
-    
+    let spanCriado = document.querySelectorAll('span');
+    for (let j = 0; j < arrayCarta.length; j += 1) {
+        novaClasse(spanCriado, j);
+    }
 }
 
 botaoCarta.addEventListener('click', addCarta);
@@ -35,11 +38,17 @@ botaoCarta.addEventListener('click', addCarta);
 function limpaCarta() {
     let arrayCarta = inputCarta.value.split(' ');
     for (let i = arrayCarta.length - 1; i >= 0; i -= 1) {
-        let spanCriado = document.querySelectorAll('span')[i];
-        pCarta.removeChild(spanCriado);
+        spanCriado = document.querySelectorAll('span');
+        pCarta.removeChild(spanCriado[i]);
     }
     contador.innerHTML = '';
     inputCarta.value = '';
 }
 
 botaoLimpa.addEventListener('click', limpaCarta);
+
+function novaClasse(spanCriado, j) {
+    spanCriado[j].addEventListener('click', function () {
+        spanCriado[j].className = classeAleatoria();
+    });
+}
