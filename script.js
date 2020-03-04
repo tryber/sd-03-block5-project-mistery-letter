@@ -1,6 +1,12 @@
 function choseClass(n) {
-  const randomclass = Math.floor(Math.random() * n);
-  return randomclass;
+  const warehouseList = document.getElementById('armazem').classList;
+  const random = Math.floor(Math.random() * n);
+  return warehouseList[random];
+}
+
+function showNumberCards(counter) {
+  const p = document.getElementById('contador');
+  p.innerText = counter;
 }
 
 function makeCards () {
@@ -16,11 +22,22 @@ function makeCards () {
     paragrafo.appendChild(span);
 
   }
+  showNumberCards(counter);
 }
 
 function LOADED() {
   let buttonMakeCards = document.getElementById('criar-carta');
   buttonMakeCards.addEventListener('click', makeCards);
+
+  let classObject = document.styleSheets[0].rules// || document.styleSheets[0].cssRules;
+  
+  const pWareHouse = document.getElementById('armazem');
+  for (let index = 0; index < classObject.length; index +=1) {
+    pWareHouse.classList.add(classObject[index].selectorText);
+  }
+  choseClass(classObject.length);
+  
+  
 }
 
 window.onload = LOADED();
