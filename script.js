@@ -8,8 +8,8 @@ function classeAleatoria() {
   const tamanhoA = Math.round(Math.random() * (tamanho.length - 1));
   const rotacaoA = Math.round(Math.random() * (rotacao.length - 1));
   const inclinacaoA = Math.round(Math.random() * (rotacao.length - 1));
-  const espaco = ' ';
-  const classe = estilo[estiloA] + espaco + tamanho[tamanhoA] + espaco + rotacao[rotacaoA] + espaco + inclinacao[inclinacaoA];
+  const e = ' ';
+  const classe = estilo[estiloA] + e + tamanho[tamanhoA] + e + rotacao[rotacaoA] + e + inclinacao[inclinacaoA];
   return classe;
 }
 
@@ -36,6 +36,7 @@ function criaSpan(arrayCarta) {
 }
 
 function addCarta() {
+  limpaCarta();
   const arrayCarta = inputCarta.value.split(' ');
   criaSpan(arrayCarta);
   contador.innerHTML = arrayCarta.length;
@@ -47,13 +48,8 @@ function addCarta() {
 botaoCarta.addEventListener('click', addCarta);
 
 function limpaCarta() {
-  const arrayCarta = inputCarta.value.split(' ');
-  for (let i = arrayCarta.length - 1; i >= 0; i -= 1) {
-    const spanCriado = document.querySelectorAll('span');
-    pCarta.removeChild(spanCriado[i]);
-  }
+  pCarta.innerHTML = '';
   contador.innerHTML = '';
-  inputCarta.value = '';
 }
 
 botaoLimpa.addEventListener('click', limpaCarta);
