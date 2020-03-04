@@ -8,7 +8,6 @@
         for (let i = 0; i < textBox.length; i++){
             let word = document.createElement("span")
             document.getElementById("carta-gerada").appendChild(word)
-            word.className = "palavra"
             word.innerHTML = textBox[i]
         }
     }
