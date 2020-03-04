@@ -1,11 +1,14 @@
 const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
+const array = [ 'newspaper','magazine1','magazine2','medium','big','reallybig','rotateleft','rotateright','skewleft','skewright'];
+
+console.log(array);
 
 let aleatorio = function () {
-    let numero = parseInt(Math.random()*10);
+    let numero = parseInt(Math.random()*10,10);
     while (numero > 3 || numero === 0) {
-      numero = parseInt(Math.random()*10);
+      numero = parseInt(Math.random()*10,10);
     }
     return numero;
 };
@@ -96,11 +99,14 @@ function separaPalavras() {
   const palavraPorPalavra = textoCarta.value.split(' ');
   const textLength = palavraPorPalavra.length;
   for (let i = 0; i < textLength; i += 1) {
+    /*
     if (i === textLength-1) {
-      cartaGerada.innerHTML += '<span>' + palavraPorPalavra[i];    
+      cartaGerada.innerHTML += '<span>' + palavraPorPalavra[i];
     } else {
     cartaGerada.innerHTML += '<span>' + palavraPorPalavra[i] + ' ';
     }
+    */
+   cartaGerada.innerHTML += '<span>' + palavraPorPalavra[i] + ' ';
   }
   estilizaPalavra(textLength);
   tamanhoPalavra(textLength);
