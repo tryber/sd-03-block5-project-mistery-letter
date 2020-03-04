@@ -22,6 +22,7 @@ const botaoLimpa = document.querySelector('#limpa-carta');
 function limpaCarta() {
   pCarta.innerHTML = '';
   contador.innerHTML = '';
+  inputCarta.value = '';
 }
 
 function criaSpan(arrayCarta) {
@@ -41,7 +42,8 @@ function novaClasse(j) {
 }
 
 function addCarta() {
-  limpaCarta();
+  pCarta.innerHTML = '';
+  contador.innerHTML = '';
   const arrayCarta = inputCarta.value.split(' ');
   criaSpan(arrayCarta);
   contador.innerHTML = arrayCarta.length;
