@@ -10,9 +10,7 @@ const randomClass = () => `${grupoEstilo[randomNumber(3)]} ${grupoTamanho[random
 
 console.log(randomClass())
 document.getElementById("criar-carta").addEventListener("click", () => {
-  if(document.getElementById("carta-gerada")){
-    document.getElementById("carta-gerada").remove()
-  }
+  document.getElementById("carta-gerada").remove()
   let p = document.createElement("p")
   p.id = "carta-gerada"
   document.getElementById("carta-div").appendChild(p)
