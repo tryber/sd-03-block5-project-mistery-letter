@@ -18,8 +18,15 @@ const pCarta = document.querySelector('#carta-gerada');
 const contador = document.querySelector('#carta-contador');
 const botaoLimpa = document.querySelector('#limpa-carta');
 
+function novaClasse(j) {
+  const spanCriado = document.querySelectorAll('span');
+  spanCriado[j].addEventListener('click', function () {
+    spanCriado[j].className = classeAleatoria();
+  });
+}
+
 function addCarta() {
-  let arrayCarta = inputCarta.value.split(' ');
+  const arrayCarta = inputCarta.value.split(' ');
   for (let i = 0; i < arrayCarta.length; i += 1) {
     const span = document.createElement('span');
     span.className = classeAleatoria();
@@ -27,16 +34,15 @@ function addCarta() {
     pCarta.appendChild(span);
   }
   contador.innerHTML = arrayCarta.length;
-  let spanCriado = document.querySelectorAll('span');
   for (let j = 0; j < arrayCarta.length; j += 1) {
-    novaClasse(spanCriado, j);
+    novaClasse(j);
   }
 }
 
 botaoCarta.addEventListener('click', addCarta);
 
 function limpaCarta() {
-  let arrayCarta = inputCarta.value.split(' ');
+  const arrayCarta = inputCarta.value.split(' ');
   for (let i = arrayCarta.length - 1; i >= 0; i -= 1) {
     spanCriado = document.querySelectorAll('span');
     pCarta.removeChild(spanCriado[i]);
@@ -46,9 +52,3 @@ function limpaCarta() {
 }
 
 botaoLimpa.addEventListener('click', limpaCarta);
-
-function novaClasse(spanCriado, j) {
-  spanCriado[j].addEventListener('click', function() {
-    spanCriado[j].className = classeAleatoria();
-  });
-}
