@@ -1,7 +1,24 @@
-function choseClass(n) {
-  const warehouseList = document.getElementById('armazem').classList;
-  const random = Math.floor(Math.random() * n);
-  return warehouseList[random];
+function choseClass() {
+  let classes = '';
+  let number = 0;
+  const pEstilo = document.getElementById('armazem-estilo').classList;
+  
+  number = Math.floor(Math.random() * 3);
+  classes += `${pEstilo[number]}`;
+
+  const pTamanho = document.getElementById('armazem-tamanho').classList;
+  number = Math.floor(Math.random() * 3);
+  classes += ` ${pTamanho[number]}`;
+
+  const pRotacao = document.getElementById('armazem-rotacao').classList;
+  number = Math.floor(Math.random() * 2);
+  classes += ` ${pRotacao[number]}`;
+
+  const pInclinacao = document.getElementById('armazem-inclinacao').classList;
+  number = Math.floor(Math.random() * 2);
+  classes += ` ${pInclinacao[number]}`;
+  console.log(classes);
+  return classes;
 }
 
 function showNumberCards(counter) {
@@ -18,7 +35,8 @@ function makeCards () {
   for (let word of words) {
     counter += 1;
     let span = document.createElement('span');
-    span.innerText = words[word];
+    span.innerText = word;
+    span.className = choseClass();
     paragrafo.appendChild(span);
 
   }
@@ -30,12 +48,6 @@ function LOADED() {
   buttonMakeCards.addEventListener('click', makeCards);
 
   let classObject = document.styleSheets[0].rules// || document.styleSheets[0].cssRules;
-  
-  const pWareHouse = document.getElementById('armazem');
-  for (let index = 0; index < classObject.length; index +=1) {
-    pWareHouse.classList.add(classObject[index].selectorText);
-  }
-  choseClass(classObject.length);
   
   
 }
