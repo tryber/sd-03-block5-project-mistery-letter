@@ -44,7 +44,7 @@ botaoCarta.addEventListener('click', addCarta);
 function limpaCarta() {
   const arrayCarta = inputCarta.value.split(' ');
   for (let i = arrayCarta.length - 1; i >= 0; i -= 1) {
-    spanCriado = document.querySelectorAll('span');
+    const spanCriado = document.querySelectorAll('span');
     pCarta.removeChild(spanCriado[i]);
   }
   contador.innerHTML = '';
