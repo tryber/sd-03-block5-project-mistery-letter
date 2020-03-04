@@ -1,3 +1,8 @@
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
 .content {
   min-height: 100%;
 }
@@ -18,20 +23,20 @@ html , body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman';
+  font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: Verdana;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .magazine2 {
-  background-image: './images/pink-pattern.png';
+  background-image: url('images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana;
   font-weight: 900;
@@ -40,4 +45,30 @@ html , body {
 .main {
   overflow: auto;
   padding-bottom: 100px;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
 }
