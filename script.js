@@ -34,6 +34,7 @@ function makeCards() {
   const inputSentence = document.getElementById('carta-texto').value;
   const words = inputSentence.split(' ');
   const paragrafo = document.getElementById('carta-gerada');
+  paragrafo.innerHTML = "";
 
   let counter = 0;
   for (const word of words) {
