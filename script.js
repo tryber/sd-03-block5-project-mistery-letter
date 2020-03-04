@@ -1,4 +1,5 @@
-    let generateLetter = document.getElementById("criar-carta")
+
+let generateLetter = document.getElementById("criar-carta")
     generateLetter.addEventListener('click', createLetter); 
     
     function createLetter(){
@@ -12,3 +13,4 @@
         }
     }
     
+
