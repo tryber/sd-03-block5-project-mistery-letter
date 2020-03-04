@@ -1,10 +1,13 @@
 const inputCarta = document.getElementById('carta-texto');
 const botaoCarta = document.getElementById('criar-carta');
 const pCarta = document.getElementById('carta-gerada');
-const estilo = []
+const estilo = ['newspaper', 'magazine1', 'magazine2'];
+const tamanho = ['medium', 'big', 'reallybig'];
+const rotacao = ['rotateleft', 'rotateright'];
+const inclinacao = ['skewleft', 'skewright']
 
 function addCarta() {
-    let arrayCarta = inputCarta.value.split(" ");
+    let arrayCarta = inputCarta.value.split(' ');
     console.log(arrayCarta);
     for (let i = 0; i < arrayCarta.length; i += 1) {
         const span = document.createElement('span');
