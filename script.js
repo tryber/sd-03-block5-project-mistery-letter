@@ -6,22 +6,22 @@ const grupoTamanho = ['medium', 'big', 'reallyBig']
 const grupoRotacao = ['rotateleft', 'rotateright']
 const grupoInclinacao = ['skewleft', 'skewright']
 
+const randomClass = () => `${grupoEstilo[randomNumber(3)]} ${grupoTamanho[randomNumber(3)]} ${grupoRotacao[randomNumber(2)]} ${grupoInclinacao[randomNumber(2)]}`
+
+console.log(randomClass())
 document.getElementById("criar-carta").addEventListener("click", () => {
+  if(document.getElementById("carta-gerada")){
+    document.getElementById("carta-gerada").remove()
+  }
+  let p = document.createElement("p")
+  p.id = "carta-gerada"
+  document.getElementById("carta-div").appendChild(p)
   let palavras = document.getElementById("carta-texto").value.split(' ');
   palavras.forEach(element => {
     let span = document.createElement("span")
     span.textContent = element
-
-    let estilo = randomNumber(3)
-    let tamanho = randomNumber(3)
-    let rotacao = randomNumber(2)
-    let inclinacao = randomNumber(2)
-
-    if (estilo != 4) {span.classList.add(grupoEstilo[estilo])}
-    if (tamanho != 4) {span.classList.add(grupoTamanho[tamanho])}
-    if (rotacao != 3) {span.classList.add(grupoRotacao[rotacao])}
-    if (inclinacao != 3) {span.classList.add(grupoInclinacao[inclinacao])}
-
+    span.classList = randomClass()
+    span.addEventListener('click', (event) => event.target.classList = randomClass())
     document.getElementById("carta-gerada").appendChild(span)
   });
 });
