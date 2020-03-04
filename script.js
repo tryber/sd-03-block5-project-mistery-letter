@@ -8,7 +8,8 @@ function classeAleatoria() {
   const tamanhoA = Math.round(Math.random() * (tamanho.length - 1));
   const rotacaoA = Math.round(Math.random() * (rotacao.length - 1));
   const inclinacaoA = Math.round(Math.random() * (rotacao.length - 1));
-  const classe = estilo[estiloA] + ' ' + tamanho[tamanhoA] + ' ' + rotacao[rotacaoA] + ' ' + inclinacao[inclinacaoA];
+  const espaco = ' ';
+  const classe = estilo[estiloA] + espaco + tamanho[tamanhoA] + espaco + rotacao[rotacaoA] + espaco + inclinacao[inclinacaoA];
   return classe;
 }
 
