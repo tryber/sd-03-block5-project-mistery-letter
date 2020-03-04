@@ -25,14 +25,18 @@ function novaClasse(j) {
   });
 }
 
-function addCarta() {
-  const arrayCarta = inputCarta.value.split(' ');
+function criaSpan(arrayCarta) {
   for (let i = 0; i < arrayCarta.length; i += 1) {
     const span = document.createElement('span');
     span.className = classeAleatoria();
     span.innerHTML = arrayCarta[i];
     pCarta.appendChild(span);
   }
+}
+
+function addCarta() {
+  const arrayCarta = inputCarta.value.split(' ');
+  criaSpan(arrayCarta);
   contador.innerHTML = arrayCarta.length;
   for (let j = 0; j < arrayCarta.length; j += 1) {
     novaClasse(j);
