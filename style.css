@@ -1,3 +1,8 @@
+body{
+    max-width: 1000px;
+    word-wrap: normal;
+}
+
 .newspaper {
     background-color: antiquewhite;
     font-family: 'Times New Roman', Times, serif;
@@ -14,7 +19,7 @@
 }
 
 .magazine2{
-      background-image: "images/pink-pattern.png";
+      background-image: url("images/pink-pattern.png");
       color: fuchsia;
       font-family: Verdana;
       font-weight: 900;
