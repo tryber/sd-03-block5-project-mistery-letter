@@ -34,7 +34,15 @@
 }
 
 .rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
   transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skew(10deg);
 }
 
 .skewright {
