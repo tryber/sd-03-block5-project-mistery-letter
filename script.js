@@ -2,7 +2,7 @@ function countWords(event){
   const message = document.getElementById("carta-texto").value;
   const messageArray = message.split(" ");
   const numberWords = messageArray.length;
-  document.getElementById("carta-contador").innerHTML = "You letter has " + numberWords + " words";
+  document.getElementById("carta-contador").innerHTML = numberWords;
 }
 function deletePrevious(event){
   if (document.getElementById("carta-gerada") != null){
