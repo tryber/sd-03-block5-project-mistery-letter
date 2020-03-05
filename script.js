@@ -1,3 +1,9 @@
+function countWords(event){
+  const message = document.getElementById("carta-texto").value;
+  const messageArray = message.split(" ");
+  const numberWords = messageArray.length;
+  document.getElementById("carta-contador").innerHTML = "You letter has " + numberWords + " words";
+}
 function deletePrevious(event){
   if (document.getElementById("carta-gerada") != null){
     document.getElementById("carta-gerada").innerHTML = '';
@@ -24,6 +30,17 @@ function createLetter(event) {
     for (let i = 0; i < resultArray.length; i += 1){
         newSpan.classList.add(resultArray[i]);
     }
+  }
+  countWords();
+  let allWords = document.querySelectorAll("span");
+  for (let i = 0; i < allWords.length; i += 1){
+    allWords[i].addEventListener('click', changeClasses);
+  }
+}
+function changeClasses(event){
+  let resultArray = pickClasses();
+  for (let i = 0; i < resultArray.length; i += 1){
+    event.target.classList.add(resultArray[i]);
   }
 }
 document.getElementById("criar-carta").addEventListener('click', createLetter);
