@@ -12,9 +12,5 @@ function createLetter() {
   }
 }
 
-function setClasses {
-  
-}
-
 // Event listeners
 createButton.addEventListener('click', createLetter);
