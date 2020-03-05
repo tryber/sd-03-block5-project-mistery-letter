@@ -21,6 +21,17 @@
             classRandon3 = classListRotation[Math.floor(Math.random() * classListRotation.length)]
             classRandon4 = classListAngle[Math.floor(Math.random() * classListAngle.length)]
             word.classList.add(classRandon1, classRandon2, classRandon3, classRandon4)
+            word.addEventListener("click", changeStyle)
+
+            function changeStyle(){
+                word.classList.remove(classRandon1, classRandon2, classRandon3, classRandon4)
+                classRandon1 = classListEstilo[Math.floor(Math.random() * classListEstilo.length)]
+                classRandon2 = classListSize[Math.floor(Math.random() * classListSize.length)]
+                classRandon3 = classListRotation[Math.floor(Math.random() * classListRotation.length)]
+                classRandon4 = classListAngle[Math.floor(Math.random() * classListAngle.length)]
+                word.classList.add(classRandon1, classRandon2, classRandon3, classRandon4)
+                
+            }
         }
     }
 
