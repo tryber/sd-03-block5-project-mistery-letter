@@ -1,3 +1,8 @@
+function deletePrevious(event){
+  if (document.getElementById("carta-gerada") != null){
+    document.getElementById("carta-gerada").innerHTML = '';
+  }
+}
 function pickClasses(event) {
   let classes = [['newspaper','magazine1','magazine2','medium'],['big','reallybig', ""],['rotateleft','rotateright', ""],['skewleft','skewright', ""]];
   let style = classes[0][Math.floor(Math.random() * 2)];
@@ -8,7 +13,7 @@ function pickClasses(event) {
   return resultArray;
 }
 function createLetter(event) {
-  debugger
+  deletePrevious();
   const message = document.getElementById("carta-texto").value;
   const messageArray = message.split(" ");
   for (let i = 0; i < messageArray.length; i += 1) {
