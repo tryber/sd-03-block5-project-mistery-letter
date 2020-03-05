@@ -32,7 +32,7 @@
                 word.classList.add(classRandon1, classRandon2, classRandon3, classRandon4)
                 
             }
-        }
-    }
+        } document.getElementById("carta-contador").innerHTML = textBox.length
+    } 
 
 
