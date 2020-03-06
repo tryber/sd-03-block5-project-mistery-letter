@@ -1,5 +1,5 @@
 window.onload = () => {
-  const randomNumber = (max) => Math.floor((max + 1) * Math.random());
+  const randomNumber = (max) => Math.floor((max) * Math.random());
   const grupoEstilo = ["newspaper", "magazine1", "magazine2"]
   const grupoTamanho = ['medium', 'big', 'reallyBig']
   const grupoRotacao = ['rotateleft', 'rotateright']
@@ -8,6 +8,7 @@ window.onload = () => {
 
   document.getElementById("criar-carta").addEventListener("click", () => {
     console.log(randomNumber(3))
+    console.log(grupoEstilo.length)
     document.getElementById("carta-gerada").innerHTML = ''
     let palavras = document.getElementById("carta-texto").value.split(' ');
     document.getElementById("carta-contador").textContent = palavras.length;
