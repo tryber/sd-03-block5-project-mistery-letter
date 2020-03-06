@@ -12,6 +12,7 @@ console.log(randomClass())
 document.getElementById("criar-carta").addEventListener("click", () => {
   document.getElementById("carta-gerada").innerHTML = ''
   let palavras = document.getElementById("carta-texto").value.split(' ');
+  document.getElementById("carta-contador").textContent = palavras.length;
   palavras.forEach(element => {
     let span = document.createElement("span")
     span.textContent = element
