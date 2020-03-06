@@ -1,5 +1,5 @@
 window.onload = () => {
-  const classes = [["newspaper", "magazine1", "magazine2"], ['medium', 'big', 'reallyBig'], ['rotateleft', 'rotateright'], ['skewleft', 'skewright']]
+  const classes = [["newspaper", "magazine1", "magazine2"], ['medium', 'big', 'reallybig'], ['rotateleft', 'rotateright'], ['skewleft', 'skewright']]
 
   document.getElementById("criar-carta").addEventListener("click", () => {
     // const randomNumber = (max) => Math.trunc((max) * Math.random());
