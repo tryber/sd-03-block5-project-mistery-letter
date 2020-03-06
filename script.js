@@ -3,7 +3,8 @@ window.onload = () => {
 
   document.getElementById("criar-carta").addEventListener("click", () => {
     const randomNumber = (max) => Math.trunc((max) * Math.random());
-    const randomClass = () => `${classes[0][randomNumber(3)]} ${classes[1][randomNumber(3)]} ${classes[2][randomNumber(2)]} ${classes[3][randomNumber(2)]}`;
+    const randomClass = () => `${classes[0][randomNumber(2)]} ${classes[1][randomNumber(2)]} ${classes[2][randomNumber(1)]} ${classes[3][randomNumber(1)]}`;
+    console.log(randomClass())
     document.getElementById("carta-gerada").innerHTML = ''
     const palavras = document.getElementById("carta-texto").value.split(' ');
     document.getElementById("carta-contador").textContent = palavras.length;
