@@ -6,14 +6,11 @@ const grupoTamanho = ['medium', 'big', 'reallyBig']
 const grupoRotacao = ['rotateleft', 'rotateright']
 const grupoInclinacao = ['skewleft', 'skewright']
 
-const randomClass = () => `${grupoEstilo[randomNumber(3)]} ${grupoTamanho[randomNumber(3)]} ${grupoRotacao[randomNumber(2)]} ${grupoInclinacao[randomNumber(2)]}`
+const randomClass = () => `${grupoEstilo[randomNumber(grupoEstilo.length - 1)]} ${grupoTamanho[randomNumber(grupoTamanho.length - 1)]} ${grupoRotacao[randomNumber(grupoRotacao.length - 1)]} ${grupoInclinacao[randomNumber(grupoInclinacao.length - 1)]}`
 
 console.log(randomClass())
 document.getElementById("criar-carta").addEventListener("click", () => {
-  document.getElementById("carta-gerada").remove()
-  let p = document.createElement("p")
-  p.id = "carta-gerada"
-  document.getElementById("carta-div").appendChild(p)
+  document.getElementById("carta-gerada").innerHTML = ''
   let palavras = document.getElementById("carta-texto").value.split(' ');
   palavras.forEach(element => {
     let span = document.createElement("span")
