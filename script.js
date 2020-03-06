@@ -1,12 +1,9 @@
 window.onload = () => {
-  const grupoEstilo = ["newspaper", "magazine1", "magazine2"];
-  const grupoTamanho = ['medium', 'big', 'reallyBig'];
-  const grupoRotacao = ['rotateleft', 'rotateright'];
-  const grupoInclinacao = ['skewleft', 'skewright'];
+  const classes = [["newspaper", "magazine1", "magazine2"], ['medium', 'big', 'reallyBig'], ['rotateleft', 'rotateright'], ['skewleft', 'skewright']]
 
   document.getElementById("criar-carta").addEventListener("click", () => {
     const randomNumber = (max) => Math.trunc((max) * Math.random());
-    const randomClass = () => `${grupoEstilo[randomNumber(grupoEstilo.length - 1)]} ${grupoTamanho[randomNumber(grupoTamanho.length - 1)]} ${grupoRotacao[randomNumber(grupoRotacao.length - 1)]} ${grupoInclinacao[randomNumber(grupoInclinacao.length - 1)]}`;
+    const randomClass = () => `${classes[0][randomNumber(3)]} ${classes[1][randomNumber(3)]} ${classes[2][randomNumber(2)]} ${classes[3][randomNumber(2)]}`;
     document.getElementById("carta-gerada").innerHTML = ''
     const palavras = document.getElementById("carta-texto").value.split(' ');
     document.getElementById("carta-contador").textContent = palavras.length;
