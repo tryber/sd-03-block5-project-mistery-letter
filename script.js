@@ -16,6 +16,7 @@ window.onload = () => {
       span.classList = randomClass()
       span.addEventListener('click', (event) => event.target.classList = randomClass())
       document.getElementById("carta-gerada").appendChild(span)
+
     });
   });
 }
