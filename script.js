@@ -4,7 +4,7 @@ window.onload = () => {
   const grupoRotacao = ['rotateleft', 'rotateright'];
   const grupoInclinacao = ['skewleft', 'skewright'];
   const randomNumber = (max) => Math.trunc((max) * Math.random());
-  const randomClass = () => `${grupoEstilo[randomNumber(grupoEstilo.length - 1)]} ${grupoTamanho[randomNumber(grupoTamanho.length - 1)]} ${grupoRotacao[randomNumber(grupoRotacao.length - 1)]} ${grupoInclinacao[randomNumber(grupoInclinacao.length - 1)]}`;
+  const randomClass = () => `${grupoEstilo[randomNumber(grupoEstilo.length)]} ${grupoTamanho[randomNumber(grupoTamanho.length)]} ${grupoRotacao[randomNumber(grupoRotacao.length)]} ${grupoInclinacao[randomNumber(grupoInclinacao.length)]}`;
 
   document.getElementById("criar-carta").addEventListener("click", () => {
     document.getElementById("carta-gerada").innerHTML = ''
