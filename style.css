@@ -1,5 +1,5 @@
 body {
-  background: rgba(49, 54, 56, 1);
+  background: rgba( 49 , 54 , 56 , 1);
   display: flex;
   font-family: Montserrat, Roboto, Arial, Helvetica, sans-serif;
   margin: 0 auto;
@@ -40,7 +40,7 @@ h2 {
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .magazine1 {
