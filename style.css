@@ -7,9 +7,9 @@ body {
 }
 
 button {
-  background-color: rgba(218, 91, 89, 0);
-  border-radius: 10px;
+  background-color: rgba( 239 , 100 , 97 , 1 );
   border: none;
+  border-radius: 10px;
   color: white;
   cursor: pointer;
   flex-grow: 1;
@@ -22,7 +22,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(218, 91, 89, 1);
+  background-color: rgba( 218 , 91 , 89 , 1);
 }
 
 h2 {
@@ -31,7 +31,7 @@ h2 {
 }
 
 .content {
-  background-color: rgba(224, 223, 213, 1);
+  background-color: rgba( 224 , 223 , 213 , 1);
   border-radius: 15px;
   margin-top: 5%;
   padding: 2em;
@@ -39,22 +39,22 @@ h2 {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: "Times New Roman";
+  font-family: Times New Roman, Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: Verdana;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .magazine2 {
-  background-image: url("images/pink-pattern.png");
+  background-image: url('images/pink-pattern.png');
   color: fuchsia;
-  font-family: Verdana;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-weight: 900;
 }
 
