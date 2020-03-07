@@ -1,0 +1,77 @@
+body {
+    display: block;
+}
+
+input {
+    width: 300px;
+}
+
+header {
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.carta {
+    border: 1px dotted violet;
+    text-align: center;
+}
+
+/*<--------------Grupo estilo-------------->*/
+
+.newspaper {
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.magazine1 {
+    background-color: teal;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.magazine2 {
+    background-image: 'imagens/pink-pattern.jpg';
+    color: fuchsia;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+/*<--------------Grupo tamanho-------------->*/
+
+.medium {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.big {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.reallybig {
+    font-size: 40px;
+    padding: 15px;
+}
+
+/*<--------------Grupo rotação-------------->*/
+
+.rotateleft {
+    transform: rotate(-5deg);
+}
+
+.rotateright {
+    transform: rotate(5deg);
+}
+
+/*<--------------Grupo rotação-------------->*/
+
+.skewleft {
+    transform: skewX(10deg);
+}
+
+.skewright {
+    transform: skewX(-10deg);
+}
