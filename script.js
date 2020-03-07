@@ -10,11 +10,11 @@ function deletePrevious(event){
   }
 }
 function pickClasses(event) {
-  let classes = [['newspaper','magazine1','magazine2','medium'],['big','reallybig', ""],['rotateleft','rotateright', ""],['skewleft','skewright', ""]];
-  let style = classes[0][Math.floor(Math.random() * 2)];
-  let size = classes[1][Math.floor(Math.random() * 2)];
-  let rotation = classes[2][Math.floor(Math.random() * 1)];
-  let inclination = classes[3][Math.floor(Math.random() * 1)];
+  let classes = [['newspaper','magazine1','magazine2','medium'],['big','reallybig'],['rotateleft','rotateright'],['skewleft','skewright']];
+  let style = classes[0][Math.trunc(Math.random() * 3)];
+  let size = classes[1][Math.trunc(Math.random() * 3)];
+  let rotation = classes[2][Math.trunc(Math.random() * 2)];
+  let inclination = classes[3][Math.trunc(Math.random() * 2)];
   let resultArray = [style, size, rotation, inclination];
   return resultArray;
 }
@@ -25,6 +25,7 @@ function createLetter(event) {
   for (let i = 0; i < messageArray.length; i += 1) {
     let newSpan = document.createElement("span");
     document.querySelector("#carta-gerada").appendChild(newSpan);
+    newSpan.addEventListener('click', changeClasses);
     newSpan.innerHTML = messageArray[i];
     let resultArray = pickClasses();
     for (let i = 0; i < resultArray.length; i += 1){
@@ -32,15 +33,12 @@ function createLetter(event) {
     }
   }
   countWords();
-  let allWords = document.querySelectorAll("span");
-  for (let i = 0; i < allWords.length; i += 1){
-    allWords[i].addEventListener('click', changeClasses);
-  }
 }
 function changeClasses(event){
+  event.target.className = ("");
   let resultArray = pickClasses();
-  for (let i = 0; i < resultArray.length; i += 1){
-    event.target.classList.add(resultArray[i]);
-  }
+    for (let i = 0; i < resultArray.length; i += 1){
+      event.target.classList.add(resultArray[i]);
+    }
 }
 document.getElementById("criar-carta").addEventListener('click', createLetter);
