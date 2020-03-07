@@ -1,6 +1,6 @@
 function countWords() {
   const message = document.getElementById('carta-texto').value;
-  const messageArray = message.split('');
+  const messageArray = message.split(' ');
   const numberWords = messageArray.length;
   document.getElementById('carta-contador').innerHTML = numberWords;
 }
@@ -10,7 +10,7 @@ function deletePrevious() {
   }
 }
 function pickClasses() {
-  const classes = [['newspaper' , 'magazine1' , 'magazine2' , 'medium'] , ['big' , 'reallybig'] , ['rotateleft' , 'rotateright'] , ['skewleft' , 'skewright']];
+  const classes = [['newspaper', 'magazine1', 'magazine2', 'medium'], ['big', 'reallybig'], ['rotateleft', 'rotateright'], ['skewleft', 'skewright']];
   const style = classes[0][Math.trunc(Math.random() * 3)];
   const size = classes[1][Math.trunc(Math.random() * 3)];
   const rotation = classes[2][Math.trunc(Math.random() * 2)];
@@ -20,7 +20,7 @@ function pickClasses() {
 }
 function changeClasses(event) {
   event.target.className = ('');
-  let resultArray = pickClasses();
+  const resultArray = pickClasses();
   for (let i = 0; i < resultArray.length; i += 1) {
     event.target.classList.add(resultArray[i]);
   }
@@ -36,7 +36,7 @@ function createLetter() {
     newSpan.innerHTML = messageArray[i];
     const resultArray = pickClasses();
     for (let k = 0; k < resultArray.length; k += 1) {
-      newSpan.classList.add(resultArray[i]);
+      newSpan.classList.add(resultArray[k]);
     }
   }
   countWords();
