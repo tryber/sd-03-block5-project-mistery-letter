@@ -9,9 +9,9 @@
 <body>
     <header>
         <label for="carta-texto">Digite algum texto, grande, de preferência, mas nem tanto: </label>
-        <input id="carta-texto">
+        <input id="carta-texto" maxlength="500">
         <button id="criar-carta" onclick="divideString()">Gerar a carta</button>
-        <p id="carta-contador">Total de palavras: 0</p>
+        <p id="carta-contador">0</p>
     </header>
     <p id="carta-gerada" class="carta"></p>
     <script src="scripts.js"></script>

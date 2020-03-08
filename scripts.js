@@ -2,18 +2,18 @@ const gEstilo = ['newspaper', 'magazine1', 'magazine2'],
   gTamanho = ['medium', 'big', 'reallybig'],
   gRotacao = ['rotateleft', 'rotateright'],
   gInclina = ['skewleft', 'skewright'],
-  contador = document.getElementById("carta-contador");
+  contador = document.getElementById('carta-contador');
 
 function geraNum(n) {
-    return (Math.floor(Math.random() * n));
-  }
+  return (Math.floor(Math.random() * n));
+}
 
 function divideString() {
-  const frase = document.getElementById('carta-texto').value,
-  areaCarta = document.getElementById('carta-gerada');
-  let arr = frase.split(' ');
-  contador.textContent = `Total de cartas: ${arr.length}`;
-  for ( let i = 0; i < arr.length; i+=1 ){
+  const frase = document.getElementById('carta-texto').value;
+  const areaCarta = document.getElementById('carta-gerada');
+  const arr = frase.split(' ');
+  contador.textContent = arr.length;
+  for (let i = 0; i < arr.length; i += 1){
     const palavra = document.createElement('span');
     palavra.addEventListener('click', selectEstilo);
     palavra.innerHTML = `${arr[i]}`;
@@ -22,7 +22,7 @@ function divideString() {
     palavra.classList.toggle(gRotacao[geraNum(2)]);
     palavra.classList.toggle(gInclina[geraNum(2)]);
     areaCarta.appendChild(palavra);
-    }
+  }
 }
 
 function selectEstilo() {
