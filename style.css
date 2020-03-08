@@ -1,4 +1,4 @@
-.main {
+.content {
     width: 90%;
     margin: auto;
     display: flex;
@@ -7,7 +7,7 @@
 
 .digitaTexto {
     border: 1px solid grey;
-    width: 70%;
+    width: 80%;
     padding: 12px 20px;
     border-radius: 4px;
 }
@@ -25,3 +25,62 @@
 .botao:hover {
     background-color: #45a049;
 }
+
+.paragrafo {
+    display: block;
+    width: 100%;
+    border: 1px solid red;
+}
+
+.newspaper {
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.magazine1 {
+    background-color: teal;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.magazine2 {
+    background-image: url(images/pink-pattern.png);
+    color: fuchsia;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+.medium {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.big {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.reallybig {
+    font-size: 40px;
+    padding: 15px;
+}
+
+.rotateleft {
+    transform: rotate(-5deg);
+}
+
+.rotateright {
+    transform: rotate(5deg);
+}
+
+.skewleft {
+    transform: skewX(10deg);
+}
+
+.skewright {
+    transform: skewX(-10deg);
+}
+
