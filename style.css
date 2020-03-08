@@ -1,0 +1,12 @@
+.main {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.digitaTexto {
+    border: 1px solid grey;
+    width: 70%
+}
