@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+span {
+    display: inline-block;
+}
+
 .digitaTexto {
     border: 1px solid grey;
     width: 80%;
@@ -27,9 +31,7 @@
 }
 
 .paragrafo {
-    display: block;
     width: 100%;
-    border: 1px solid red;
 }
 
 .newspaper {
