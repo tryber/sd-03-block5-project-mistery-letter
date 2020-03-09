@@ -17,21 +17,15 @@ function estilizaPalavra(tl) {
 
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
-    // roda = aleatorio();
-
-    let roda = parseInt(Math.random() * 10, 10);
-    while (roda > 3 || roda === 0) {
-      roda = parseInt(Math.random() * 10, 10);
-    }
-
+    roda = aleatorio();
     if (roda === 1) {
-      selecionaPalavra.className = 'newspaper';
+      selecionaPalavra.className = `${array[0]}`;
     }
     if (roda === 2) {
-      selecionaPalavra.className = 'magazine1';
+      selecionaPalavra.className = `${array[1]}`;
     }
     if (roda === 3) {
-      selecionaPalavra.className = 'magazine2';
+      selecionaPalavra.className = `${array[2]}`;
     }
   }
 }
@@ -44,13 +38,13 @@ function tamanhoPalavra(tl2) {
     roda2 = aleatorio();
 
     if (roda2 === 1) {
-      selecionaPalavra2.className += ' medium';
+      selecionaPalavra2.className += ` ${array[4]}`;
     }
     if (roda2 === 2) {
-      selecionaPalavra2.className += ' big';
+      selecionaPalavra2.className += ` ${array[5]}`;
     }
     if (roda2 === 3) {
-      selecionaPalavra2.className += ' reallybig';
+      selecionaPalavra2.className += ` ${array[6]}`;
     }
   }
 }
@@ -67,10 +61,10 @@ function rotacaoPalavra(tl3) {
     }
 
     if (roda3 === 1) {
-      selecionaPalavra3.className += ' rotateright';
+      selecionaPalavra3.className += ` ${array[7]}`;
     }
     if (roda3 === 2) {
-      selecionaPalavra3.className += ' rotateleft';
+      selecionaPalavra3.className += ` ${array[8]}`;
     }
   }
 }
@@ -87,10 +81,10 @@ function inclinacaoPalavra(tl4) {
     }
 
     if (roda4 === 1) {
-      selecionaPalavra4.className += ' skewright';
+      selecionaPalavra4.className += ` ${array[9]}`;
     }
     if (roda4 === 2) {
-      selecionaPalavra4.className += ' skewleft';
+      selecionaPalavra4.className += ` ${array[10]}`;
     }
   }
 }
