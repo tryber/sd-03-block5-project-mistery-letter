@@ -94,9 +94,9 @@ function separaPalavras() {
   const palavraPorPalavra = textoCarta.value.split(' ');
   const textLength = palavraPorPalavra.length;
   for (let i = 0; i < textLength; i += 1) {
-    cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]}`;
+    cartaGerada.innerHTML += `${palavraPorPalavra[i]}`;
   }
-  cartaContador.innerHTML = `<span> O número de palavras digitadas foi ${textLength}`;
+  cartaContador.innerHTML = `${textLength}`;
   estilizaPalavra(textLength);
   tamanhoPalavra(textLength);
   rotacaoPalavra(textLength);
