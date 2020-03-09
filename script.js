@@ -28,7 +28,6 @@ function estilizaPalavra(tl) {
       selecionaPalavra.className = 'magazine2';
     }
   }
-
 }
 
 function tamanhoPalavra(tl2) {
@@ -48,7 +47,6 @@ function tamanhoPalavra(tl2) {
       selecionaPalavra2.className += ' reallybig';
     }
   }
-
 }
 
 function rotacaoPalavra(tl3) {
@@ -69,7 +67,6 @@ function rotacaoPalavra(tl3) {
       selecionaPalavra3.className += ' rotateleft';
     }
   }
-
 }
 
 function inclinacaoPalavra(tl4) {
@@ -90,14 +87,13 @@ function inclinacaoPalavra(tl4) {
       selecionaPalavra4.className += ' skewleft';
     }
   }
-
 }
 
 function separaPalavras() {
   const palavraPorPalavra = textoCarta.value.split(' ');
   const textLength = palavraPorPalavra.length;
   for (let i = 0; i < textLength; i += 1) {
-    cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]} `;
+    cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]}`;
   }
   estilizaPalavra(textLength);
   tamanhoPalavra(textLength);
