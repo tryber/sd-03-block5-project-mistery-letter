@@ -17,7 +17,12 @@ function estilizaPalavra(tl) {
 
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
-    roda = aleatorio();
+    // roda = aleatorio();
+
+    let roda = parseInt(Math.random() * 10, 10);
+    while (roda > 3 || roda === 0) {
+      roda = parseInt(Math.random() * 10, 10);
+    }
 
     if (roda === 1) {
       selecionaPalavra.className = 'newspaper';
