@@ -97,14 +97,7 @@ function separaPalavras() {
   const palavraPorPalavra = textoCarta.value.split(' ');
   const textLength = palavraPorPalavra.length;
   for (let i = 0; i < textLength; i += 1) {
-    /*
-    if (i === textLength-1) {
-      cartaGerada.innerHTML += '<span>' + palavraPorPalavra[i];
-    } else {
-    cartaGerada.innerHTML += '<span>' + palavraPorPalavra[i] + ' ';
-    }
-    */
-    cartaGerada.innerHTML += '<span>' + palavraPorPalavra[i];
+    cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]} `;
   }
   estilizaPalavra(textLength);
   tamanhoPalavra(textLength);
