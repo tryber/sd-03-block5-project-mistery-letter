@@ -2,7 +2,6 @@ const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
 const cartaContador = document.getElementById('carta-contador');
-// const array = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
 
 const aleatorio = function () {
   let numero = parseInt(Math.random() * 10, 10);
@@ -14,8 +13,7 @@ const aleatorio = function () {
 
 function estilizaPalavra(tl) {
   let roda;
-  const estilo = ['newspaper', 'magazine1', 'magazine2',];
-
+  const estilo = ['newspaper', 'magazine1', 'magazine2'];
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
     roda = aleatorio();
@@ -33,12 +31,10 @@ function estilizaPalavra(tl) {
 
 function tamanhoPalavra(tl2) {
   let roda2;
-  const tamanho = ['medium', 'big', 'reallybig',];
-
+  const tamanho = ['medium', 'big', 'reallybig'];
   for (let i = 0; i < tl2; i += 1) {
     const selecionaPalavra2 = document.getElementsByTagName('span')[i];
     roda2 = aleatorio();
-
     if (roda2 === 1) {
       selecionaPalavra2.className += ` ${tamanho[0]}`;
     }
@@ -53,16 +49,13 @@ function tamanhoPalavra(tl2) {
 
 function rotacaoPalavra(tl3) {
   let roda3;
-  const rotacao = ['rotateleft', 'rotateright',];
-
+  const rotacao = ['rotateleft', 'rotateright'];
   for (let i = 0; i < tl3; i += 1) {
     const selecionaPalavra3 = document.getElementsByTagName('span')[i];
     roda3 = aleatorio();
-
     if (roda3 > 2) {
       roda3 = aleatorio();
     }
-
     if (roda3 === 1) {
       selecionaPalavra3.className += ` ${rotacao[0]}`;
     }
@@ -74,16 +67,13 @@ function rotacaoPalavra(tl3) {
 
 function inclinacaoPalavra(tl4) {
   let roda4;
-  const inclinacao = ['skewleft', 'skewright',];
-
+  const inclinacao = ['skewleft', 'skewright'];
   for (let i = 0; i < tl4; i += 1) {
     const selecionaPalavra4 = document.getElementsByTagName('span')[i];
     roda4 = aleatorio();
-
     if (roda4 > 2) {
       roda4 = aleatorio();
     }
-
     if (roda4 === 1) {
       selecionaPalavra4.className += ` ${inclinacao[0]}`;
     }
