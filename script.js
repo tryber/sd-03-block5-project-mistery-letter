@@ -1,6 +1,7 @@
 const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
+const cartaContador = document.getElementById('carta-contador');
 const array = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
 
 const aleatorio = function () {
@@ -95,6 +96,7 @@ function separaPalavras() {
   for (let i = 0; i < textLength; i += 1) {
     cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]}`;
   }
+  cartaContador.innerHTML = `<span> O número de palavras digitadas foi ${textLength}`;
   estilizaPalavra(textLength);
   tamanhoPalavra(textLength);
   rotacaoPalavra(textLength);
