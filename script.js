@@ -5,18 +5,44 @@ const cartaContador = document.getElementById('carta-contador');
 
 const aleatorio = function () {
   let numero = parseInt(Math.random() * 10, 10);
-  while (numero > 3 || numero === 0) {
+  /*while (numero > 3 || numero === 0) {
     numero = parseInt(Math.random() * 10, 10);
   }
+  return numero;
+  */
   return numero;
 };
 
 function estilizaPalavra(tl) {
   let roda;
-  const estilo = ['newspaper', 'magazine1', 'magazine2'];
+  const estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
     roda = aleatorio();
+
+    console.log(roda);
+    
+    selecionaPalavra.className = `${estilo[roda]}`;
+    // Exclui classes iguais
+    if (roda === 0 || roda === 1 || roda === 2) {
+       while(roda <= 2) {
+        roda = aleatorio();
+       }
+    }else if (roda === 3 || roda === 4 || roda === 5) {
+      while(roda >=3 && roda <= 5) {
+       roda = aleatorio();
+      }
+    }else if (roda === 6 || roda === 7) {
+      while(roda === 6 || roda === 7) {
+       roda = aleatorio();
+      }
+    }else if (roda === 8 || roda === 9) {
+      while(roda === 8 || roda === 9) {
+       roda = aleatorio();
+      }
+    }
+    selecionaPalavra.className += ` ${estilo[roda]}`;
+    /*
     if (roda === 1) {
       selecionaPalavra.className = `${estilo[0]}`;
     }
@@ -26,6 +52,7 @@ function estilizaPalavra(tl) {
     if (roda === 3) {
       selecionaPalavra.className = `${estilo[2]}`;
     }
+    */
   }
 }
 
@@ -91,9 +118,9 @@ function separaPalavras() {
   }
   cartaContador.innerHTML = `${textLength}`;
   estilizaPalavra(textLength);
-  tamanhoPalavra(textLength);
-  rotacaoPalavra(textLength);
-  inclinacaoPalavra(textLength);
+  //tamanhoPalavra(textLength);
+  //rotacaoPalavra(textLength);
+  //inclinacaoPalavra(textLength);
 }
 
 botaoCarta.addEventListener('click', separaPalavras);
