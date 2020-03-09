@@ -94,7 +94,7 @@ function separaPalavras() {
   const palavraPorPalavra = textoCarta.value.split(' ');
   const textLength = palavraPorPalavra.length;
   for (let i = 0; i < textLength; i += 1) {
-    cartaGerada.innerHTML += `${palavraPorPalavra[i]}`;
+    cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]}`;
   }
   cartaContador.innerHTML = `${textLength}`;
   estilizaPalavra(textLength);
