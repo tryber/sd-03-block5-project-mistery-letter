@@ -2,7 +2,7 @@ const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
 const cartaContador = document.getElementById('carta-contador');
-const array = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
+// const array = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
 
 const aleatorio = function () {
   let numero = parseInt(Math.random() * 10, 10);
@@ -14,43 +14,46 @@ const aleatorio = function () {
 
 function estilizaPalavra(tl) {
   let roda;
+  const estilo = ['newspaper', 'magazine1', 'magazine2',];
 
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
     roda = aleatorio();
     if (roda === 1) {
-      selecionaPalavra.className = `${array[0]}`;
+      selecionaPalavra.className = `${estilo[0]}`;
     }
     if (roda === 2) {
-      selecionaPalavra.className = `${array[1]}`;
+      selecionaPalavra.className = `${estilo[1]}`;
     }
     if (roda === 3) {
-      selecionaPalavra.className = `${array[2]}`;
+      selecionaPalavra.className = `${estilo[2]}`;
     }
   }
 }
 
 function tamanhoPalavra(tl2) {
   let roda2;
+  const tamanho = ['medium', 'big', 'reallybig',];
 
   for (let i = 0; i < tl2; i += 1) {
     const selecionaPalavra2 = document.getElementsByTagName('span')[i];
     roda2 = aleatorio();
 
     if (roda2 === 1) {
-      selecionaPalavra2.className += ` ${array[4]}`;
+      selecionaPalavra2.className += ` ${tamanho[0]}`;
     }
     if (roda2 === 2) {
-      selecionaPalavra2.className += ` ${array[5]}`;
+      selecionaPalavra2.className += ` ${tamanho[1]}`;
     }
     if (roda2 === 3) {
-      selecionaPalavra2.className += ` ${array[6]}`;
+      selecionaPalavra2.className += ` ${tamanho[2]}`;
     }
   }
 }
 
 function rotacaoPalavra(tl3) {
   let roda3;
+  const rotacao = ['rotateleft', 'rotateright',];
 
   for (let i = 0; i < tl3; i += 1) {
     const selecionaPalavra3 = document.getElementsByTagName('span')[i];
@@ -61,16 +64,17 @@ function rotacaoPalavra(tl3) {
     }
 
     if (roda3 === 1) {
-      selecionaPalavra3.className += ` ${array[7]}`;
+      selecionaPalavra3.className += ` ${rotacao[0]}`;
     }
     if (roda3 === 2) {
-      selecionaPalavra3.className += ` ${array[8]}`;
+      selecionaPalavra3.className += ` ${rotacao[1]}`;
     }
   }
 }
 
 function inclinacaoPalavra(tl4) {
   let roda4;
+  const inclinacao = ['skewleft', 'skewright',];
 
   for (let i = 0; i < tl4; i += 1) {
     const selecionaPalavra4 = document.getElementsByTagName('span')[i];
@@ -81,10 +85,10 @@ function inclinacaoPalavra(tl4) {
     }
 
     if (roda4 === 1) {
-      selecionaPalavra4.className += ` ${array[9]}`;
+      selecionaPalavra4.className += ` ${inclinacao[0]}`;
     }
     if (roda4 === 2) {
-      selecionaPalavra4.className += ` ${array[10]}`;
+      selecionaPalavra4.className += ` ${inclinacao[1]}`;
     }
   }
 }
