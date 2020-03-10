@@ -8,6 +8,7 @@ window.onload = function(){
  let rotacao =  ['rotateleft','rotateright'];
  let inclinacao = ['skewleft','skewright'];
  let spanElement ;
+ let contaPalavras = 0;
 botao_criar = document.getElementById('criar-carta');
 botao_criar.addEventListener('click', function(){
     estilizarTexto();
@@ -21,7 +22,7 @@ function estilizarTexto(){
     let palavras = inputText.value.split(" ");
     document.getElementById('carta-gerada').innerHTML = "";
     for(let i in palavras){
-
+       
         spanElement = document.createElement('span') ;
         spanElement.classList.add(estilo[Math.floor(Math.random() * 3)],
                                   tamanho[Math.floor(Math.random() * 3)],
@@ -38,7 +39,10 @@ function estilizarTexto(){
             rotacao[Math.floor(Math.random() * 2)],
             inclinacao[Math.floor(Math.random() * 2)]);
        });
+       contaPalavras += 1;
+       
     }
-   
+    document.getElementById('carta-contador').innerHTML = contaPalavras;
+   console.log(contaPalavras);
      
 }
