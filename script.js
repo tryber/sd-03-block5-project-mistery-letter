@@ -17,8 +17,8 @@ function adicionarClasse(span) {
   const estilo = ['newspaper', 'magazine1', 'magazine2'];
   const tamanho = ['medium', 'big', 'reallybig'];
   const rotacao = ['rotateleft', 'rotateright'];
-  const inclinacao = ['skewleft', 'skewright']
-  const transform = [rotacao,inclinacao];
+  const inclinacao = ['skewleft', 'skewright'];
+  const transform = [rotacao, inclinacao];
   const aleatoriedade = [estilo, tamanho, transform[Math.floor(Math.random() * 2)]];
   if (span.classList) {
     span.removeAttribute('class');
