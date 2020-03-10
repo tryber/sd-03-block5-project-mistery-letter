@@ -11,12 +11,10 @@ const aleatorio = function () {
 
 function estilizaPalavra(tl) {
   let roda;
-  let estilo = [''];
-  estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
+  let estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
     roda = aleatorio();
-    // selecionaPalavra.className = `${estilo[roda]}`;
     array[0] = estilo[roda];
     // Exclui classes iguais
     if (roda === 0 || roda === 1 || roda === 2) {
@@ -24,32 +22,20 @@ function estilizaPalavra(tl) {
         roda = aleatorio();
       }
     } else if (roda === 3 || roda === 4 || roda === 5) {
-        while (roda >= 3 && roda <= 5) {
-          roda = aleatorio();
-        }
+      while (roda >= 3 && roda <= 5) {
+        roda = aleatorio();
+      }
     } else if (roda === 6 || roda === 7) {
-        while (roda > 5 && roda < 8){
-          roda = aleatorio();
-        }    
+      while (roda > 5 && roda < 8) {
+        roda = aleatorio();
+      }
     } else if (roda === 8 || roda === 9) {
-        while (roda > 7 && roda < 10){
-          roda = aleatorio();  
-        }
+      while (roda > 7 && roda < 10) {
+        roda = aleatorio();
+      }
     }
-    // selecionaPalavra.className += ` ${estilo[roda]}`;
     array[1] = estilo[roda];
     selecionaPalavra.className = `${array[0]} ${array[1]}`;
-    /*
-    if (roda === 1) {
-      selecionaPalavra.className = `${estilo[0]}`;
-    }
-    if (roda === 2) {
-      selecionaPalavra.className = `${estilo[1]}`;
-    }
-    if (roda === 3) {
-      selecionaPalavra.className = `${estilo[2]}`;
-    }
-    */
   }
 }
 
