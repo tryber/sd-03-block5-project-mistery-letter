@@ -12,8 +12,6 @@ function adicionarClasse(span) {
     const tamanho = ['medium','big','reallybig'];
     const transform = [rotacao = ['rotateleft', 'rotateright'],inclinacao = ['skewleft', 'skewright']];
     const aleatoriedade = [estilo,tamanho,transform[Math.floor(Math.random() * 2)]]
-    console.log(aleatoriedade);
-    
     for (let i = 0; i < aleatoriedade.length; i += 1) {
         if (i < 2) {
             span.classList.add(aleatoriedade[i][Math.floor(Math.random() * 3)]);
@@ -33,6 +31,9 @@ function montarParagrafo(item) {
 }
 
 function gerarParagrafo() {
+    if (paragrafo) {
+        paragrafo.innerHTML = '';
+    }
     const textoDigitado = inputText.value.split(" ");
     textoDigitado.forEach(montarParagrafo);
 }
