@@ -2,16 +2,17 @@ const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
 const cartaContador = document.getElementById('carta-contador');
-const array = [ '' ];
+const array = [''];
 
 const aleatorio = function () {
-  let numero = parseInt(Math.random() * 10, 10);
+  const numero = parseInt(Math.random() * 9, 10);
   return numero;
 };
 
 function estilizaPalavra(tl) {
   let roda;
-  let estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
+  let estilo = [''];
+  estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
     roda = aleatorio();
@@ -19,21 +20,21 @@ function estilizaPalavra(tl) {
     array[0] = estilo[roda];
     // Exclui classes iguais
     if (roda === 0 || roda === 1 || roda === 2) {
-       while(roda <= 2) {
+      while (roda <= 2) {
         roda = aleatorio();
-       }
-    }else if (roda === 3 || roda === 4 || roda === 5) {
-      while(roda >=3 && roda <= 5) {
-       roda = aleatorio();
       }
-    }else if (roda === 6 || roda === 7) {
-      while(roda === 6 || roda === 7) {
-       roda = aleatorio();
-      }
-    }else if (roda === 8 || roda === 9) {
-      while(roda === 8 || roda === 9) {
-       roda = aleatorio();
-      }
+    } else if (roda === 3 || roda === 4 || roda === 5) {
+        while (roda >= 3 && roda <= 5) {
+          roda = aleatorio();
+        }
+    } else if (roda === 6 || roda === 7) {
+        while (roda > 5 && roda < 8){
+          roda = aleatorio();
+        }    
+    } else if (roda === 8 || roda === 9) {
+        while (roda > 7 && roda < 10){
+          roda = aleatorio();  
+        }
     }
     // selecionaPalavra.className += ` ${estilo[roda]}`;
     array[1] = estilo[roda];
