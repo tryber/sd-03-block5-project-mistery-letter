@@ -14,8 +14,8 @@ botao_criar.addEventListener('click', function(){
 });
 
 function estilizarTexto(){
-    let classes = (['newspaper','magazine1','magazine2'],['medium','big',
-      'reallybig'],['rotateleft','rotateright'],['skewleft','skewright']);
+    let classes = [['newspaper','magazine1','magazine2'],['medium','big',
+      'reallybig'],['rotateleft','rotateright'],['skewleft','skewright']];
     let inputText = document.getElementById('carta-texto');
     let palavras = inputText.value.split(" ");
 
@@ -26,8 +26,6 @@ function estilizarTexto(){
     for(let i in palavras){
         let spanElement = document.createElement('span') ;
         spanElement.innerHTML = palavras[i];
-
-        console.log(classes);
         document.getElementById('carta-gerada').appendChild(spanElement);
     }
      
