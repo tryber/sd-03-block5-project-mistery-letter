@@ -2,6 +2,7 @@ const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
 const cartaContador = document.getElementById('carta-contador');
+let estilo = [''];
 
 const aleatorio = function () {
   let numero = parseInt(Math.random() * 10, 10);
@@ -15,7 +16,7 @@ const aleatorio = function () {
 
 function estilizaPalavra(tl) {
   let roda;
-  const estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
+  estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
     roda = aleatorio();
