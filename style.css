@@ -50,5 +50,8 @@ transform: skew(10deg);
 transform: skew(-10deg);
 }
 
+span{
+margin-left: 10px;
+}
 
 

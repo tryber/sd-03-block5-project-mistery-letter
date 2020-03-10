@@ -9,10 +9,14 @@ botao_criar.addEventListener('click', function(){
 
 function estilizarTexto(){
     let inputText = document.getElementById('carta-texto');
-    console.log(inputText.value);
-    let spanElement = document.createElement('span') ;
-    spanElement.innerHTML = inputText.value;
-    console.log(spanElement);
-    document.getElementById('carta-gerada').appendChild(spanElement);
+    let palavras = inputText.value.split(" ");
 
+    for(let i in palavras){
+        let spanElement = document.createElement('span') ;
+        spanElement.innerHTML = palavras[i];
+        
+        console.log(spanElement);
+        document.getElementById('carta-gerada').appendChild(spanElement);
+    }
+     
 }
