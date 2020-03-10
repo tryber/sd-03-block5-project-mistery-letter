@@ -9,7 +9,7 @@ botao_criar.addEventListener('click', function(){
 
 function estilizarTexto(){
     let classes = ['newspaper','magazine1','magazine2','medium','big',
-      'reallybig','rotateleft','rotateright','skewleft','skewright' ];
+      'reallybig','rotateleft','rotateright','skewleft','skewright'];
     let inputText = document.getElementById('carta-texto');
     let palavras = inputText.value.split(" ");
 
