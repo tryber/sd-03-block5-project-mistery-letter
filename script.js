@@ -21,6 +21,7 @@ function estilizarTexto(){
 
     let palavras = inputText.value.split(" ");
     document.getElementById('carta-gerada').innerHTML = "";
+    contaPalavras = 0;
     for(let i in palavras){
        
         spanElement = document.createElement('span') ;
@@ -42,7 +43,6 @@ function estilizarTexto(){
        contaPalavras += 1;
        
     }
-    document.getElementById('carta-contador').innerHTML = contaPalavras;
-   console.log(contaPalavras);
+    document.getElementById('carta-contador').innerHTML = contaPalavras;  
      
 }
