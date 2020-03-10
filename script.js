@@ -3,8 +3,14 @@
 const inputText = document.querySelector('#carta-texto');
 const botao = document.querySelector('#criar-carta');
 const paragrafo = document.querySelector('#carta-gerada');
+const contador = document.querySelector('#carta-contador');
 
 // Funções
+
+function contarPalavras() {
+    const textoDigitado = inputText.value.split(" ");
+    contador.innerHTML = "Quantidade de palavras digitadas: " + textoDigitado.length;
+}
 
 
 function adicionarClasse(span) {
@@ -54,3 +60,4 @@ function teste () {
 //  event listener
 
 botao.addEventListener('click',gerarParagrafo);
+botao.addEventListener('click', contarPalavras);
