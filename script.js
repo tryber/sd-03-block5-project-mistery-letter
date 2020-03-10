@@ -23,12 +23,48 @@ function estilizarTexto(){
     document.getElementById('carta-gerada').innerHTML = "";
     contaPalavras = 0;
     for(let i in palavras){
-       
         spanElement = document.createElement('span') ;
+       let aleatorio = Math.floor(Math.random() * 4) ;
+         switch (aleatorio) {
+             case 0:
+                spanElement.classList.add(estilo[Math.floor(Math.random() * 3)],
+                tamanho[Math.floor(Math.random() * 3)]);
+                console.log("case 0",estilo[Math.floor(Math.random() * 3)],
+                tamanho[Math.floor(Math.random() * 3)] );
+                 break;
+             case 1:
+                spanElement.classList.add( rotacao[Math.floor(Math.random() * 2)],
+                inclinacao[Math.floor(Math.random() * 2)]);
+                console.log("case 1",  rotacao[Math.floor(Math.random() * 2)],
+                inclinacao[Math.floor(Math.random() * 2)]);
+                 break;
+                 case 2:
+                    spanElement.classList.add( estilo[Math.floor(Math.random() * 3)],
+                    inclinacao[Math.floor(Math.random() * 2)]);
+                    console.log("case 2",  estilo[Math.floor(Math.random() * 3)],
+                    inclinacao[Math.floor(Math.random() * 2)] );
+                     break;
+                     case 3:
+                    spanElement.classList.add( estilo[Math.floor(Math.random() * 3)],
+                    rotacao[Math.floor(Math.random() * 2)]);
+                    console.log("case 3", estilo[Math.floor(Math.random() * 3)],
+                    rotacao[Math.floor(Math.random() * 2)]);
+                     break;
+                     case 4:
+                    spanElement.classList.add( tamanho[Math.floor(Math.random() * 3)],
+                    rotacao[Math.floor(Math.random() * 2)]);
+                    console.log("case 4", tamanho[Math.floor(Math.random() * 3)],
+                    rotacao[Math.floor(Math.random() * 2)] );
+                     break;
+             default:
+                 break;
+         }
+
+       /* 
         spanElement.classList.add(estilo[Math.floor(Math.random() * 3)],
                                   tamanho[Math.floor(Math.random() * 3)],
                                   rotacao[Math.floor(Math.random() * 2)],
-                                  inclinacao[Math.floor(Math.random() * 2)]);
+                                  inclinacao[Math.floor(Math.random() * 2)]); */
         spanElement.innerHTML = palavras[i];
        
         
