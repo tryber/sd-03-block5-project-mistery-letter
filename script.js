@@ -4,19 +4,21 @@ window.onload = function(){
   
 }
 
-botao_criar = document.getElementById('criar-carta');
+ let estilo =  ['newspaper','magazine1','magazine2'];
+ let tamanho =  ['medium','big', 'reallybig'];
+ let rotacao =  ['rotateleft','rotateright'];
+ let inclinacao = ['skewleft','skewright'];
 
+botao_criar = document.getElementById('criar-carta');
 botao_criar.addEventListener('click', function(){
     estilizarTexto();
-
-
-
 });
 
 function estilizarTexto(){    
-    let classes = [['newspaper','magazine1','magazine2'],['medium','big',
-      'reallybig'],['rotateleft','rotateright'],['skewleft','skewright']];
+    
     let inputText = document.getElementById('carta-texto');
+
+
     let palavras = inputText.value.split(" ");
 
    /*  let class1 = classes[Math.floor(Math.random() * 4)][Math.floor(Math.random() * classes.length -1)];
