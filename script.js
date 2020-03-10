@@ -8,7 +8,7 @@ const contador = document.querySelector('#carta-contador');
 // Funções
 
 function contarPalavras() {
-  const textoDigitado = inputText.value.split(" ");
+  const textoDigitado = inputText.value.split(' ');
   contador.innerHTML = textoDigitado.length;
 }
 
@@ -16,7 +16,9 @@ function contarPalavras() {
 function adicionarClasse(span) {
   const estilo = ['newspaper', 'magazine1', 'magazine2'];
   const tamanho = ['medium', 'big', 'reallybig'];
-  const transform = [rotacao = ['rotateleft', 'rotateright'], inclinacao = ['skewleft', 'skewright']];
+  const rotacao = ['rotateleft', 'rotateright'];
+  const inclinacao = ['skewleft', 'skewright']
+  const transform = [rotacao,inclinacao];
   const aleatoriedade = [estilo, tamanho, transform[Math.floor(Math.random() * 2)]];
   if (span.classList) {
     span.removeAttribute('class');
@@ -33,7 +35,7 @@ function adicionarClasse(span) {
 function addCustomClass(span) {
   span.addEventListener('click', function () {
     adicionarClasse(span);
-  })
+  });
 }
 
 
@@ -49,12 +51,8 @@ function gerarParagrafo() {
   if (paragrafo) {
     paragrafo.innerHTML = '';
   }
-  const textoDigitado = inputText.value.split(" ");
+  const textoDigitado = inputText.value.split(' ');
   textoDigitado.forEach(montarParagrafo);
-}
-
-function teste() {
-  console.log('funciona');
 }
 
 //  event listener
