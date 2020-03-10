@@ -10,6 +10,9 @@ botao_criar.addEventListener('click', function(){
 function estilizarTexto(){
     let inputText = document.getElementById('carta-texto');
     console.log(inputText.value);
-    document.getElementById('carta-gerada').innerHTML = inputText.value;
+    let spanElement = document.createElement('span') ;
+    spanElement.innerHTML = inputText.value;
+    console.log(spanElement);
+    document.getElementById('carta-gerada').appendChild(spanElement);
 
 }
