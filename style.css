@@ -1,0 +1,51 @@
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman;
+  font-weight: bold;
+}
+
+.magazine1 {
+  background-color com o valor teal
+  - color com o valor white
+  - font-family com o valor Verdana
+  - font-weight com o valor 900
+  - text-transform com o valor uppercase
+}
+
+.magazine2 {
+  - background-image com a imagem images/pink-pattern.png
+  - color com o valor fuchsia
+  - font-family com o valor Verdana
+  - font-weight com o valor 900
+}
+
+.medium {
+  font-size com o valor 20px
+  - padding com o valor 8px
+}
+
+.big {
+  font-size com o valor 30px
+  - padding com o valor 10px
+}
+
+.reallybig {
+  font-size com o valor 40px
+  - padding com o valor 15px
+}
+
+.rotateleft {
+  transform: rotate(-5deg)
+}
+
+.rotateright {
+  transform: rotate(5deg)
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}
