@@ -8,7 +8,7 @@ window.onload = function(){
  let tamanho =  ['medium','big', 'reallybig'];
  let rotacao =  ['rotateleft','rotateright'];
  let inclinacao = ['skewleft','skewright'];
-
+ 
 botao_criar = document.getElementById('criar-carta');
 botao_criar.addEventListener('click', function(){
     estilizarTexto();
@@ -17,17 +17,19 @@ botao_criar.addEventListener('click', function(){
 function estilizarTexto(){    
     
     let inputText = document.getElementById('carta-texto');
-
+    
 
     let palavras = inputText.value.split(" ");
-
-   /*  let class1 = classes[Math.floor(Math.random() * 4)][Math.floor(Math.random() * classes.length -1)];
-       let class2 = classes[Math.floor(Math.random() * 4)][Math.floor(Math.random() * classes.length -1)];
-     */
-    
+    document.getElementById('carta-gerada').innerHTML = "";
     for(let i in palavras){
+
         let spanElement = document.createElement('span') ;
+        spanElement.classList.add(estilo[Math.floor(Math.random() * 3)],
+                                  tamanho[Math.floor(Math.random() * 3)],
+                                  rotacao[Math.floor(Math.random() * 2)],
+                                  inclinacao[Math.floor(Math.random() * 2)]);
         spanElement.innerHTML = palavras[i];
+        
         document.getElementById('carta-gerada').appendChild(spanElement);
     }
      
