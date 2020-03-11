@@ -4,11 +4,11 @@ const texto = document.getElementById('carta-texto');
 
 botao.addEventListener('click', function criarCarta() {
   const frase = texto.value;
-  var frasesp = frase.split(' ');
-  
-  for (let i in frasesp){
+  let fraseSplit = frase.split(' ');
+
+  for (const i in fraseSplit) {
     const span = document.createElement('span');
     carta.appendChild(span);
-    span.innerText = frasesp[i] + ' ';
+    span.innerText = fraseSplit[i];
   }
 });
