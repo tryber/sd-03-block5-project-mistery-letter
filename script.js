@@ -1,10 +1,8 @@
 const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
 const cartaContador = document.getElementById('carta-contador');
-let roda;
 const array = [''];
-let selecao = '';
-const classesAdicionadas = 2;
+let roda;
 
 const aleatorio = function (alea) {
   const numero = parseInt(Math.random() * alea, 10);
@@ -12,55 +10,35 @@ const aleatorio = function (alea) {
 };
 
 function estilizaPalavra(tl) {
-  const estilo = ['newspaper', 'magazine1', 'magazine2'];
-  const tamanho = ['medium', 'big', 'reallybig'];
-  const rotacao = ['rotateleft', 'rotateright'];
-  const inclinacao = ['skewleft', 'skewright'];
-  
+  estilizador = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
+  let n = 10;
   for (let i = 0; i < tl; i++){
     const selecionaPalavra = document.getElementsByTagName('span')[i];
+    
     for (let j = 0; j < 2; j++) {
-      roda = aleatorio(3);
-      if (roda === 0) {
-        selecao = 'estilo';
+      roda = aleatorio(n);
+      
+      if (estilizador[roda] === 'newspaper' || estilizador[roda] === 'magazine1' || estilizador[roda] === 'magazine2') {
+        array[j] = estilizador[roda];
+        estilizador.splice(0,3);
+        n = estilizador.length;
+      } else if (estilizador[roda] === 'medium' || estilizador[roda] === 'big' || estilizador[roda] === 'reallybig'){
+        array[j] = estilizador[roda];
+        estilizador.splice(3,3);
+        n = estilizador.length;
+      } else if (estilizador[roda] === 'rotateright' || estilizador[roda] === 'rotateleft'){
+        array[j] = estilizador[roda];
+        estilizador.splice(6,2);
+        n = estilizador.length;
+      } else if (estilizador[roda] === 'skewright' || estilizador[roda] === 'skewleft'){
+        array[j] = estilizador[roda];
+        estilizador.splice(8,2);
+        n = estilizador.length;
       }
-      if (roda === 1) {
-        selecao = 'tamanho';
-      }
-      if (roda === 2) {
-        selecao = 'rotacao';
-      }
-      if (roda === 3) {
-        selecao = 'inclinacao';
-      }
-  
-      if (selecao === 'estilo') {
-        roda = aleatorio(3);
-        array[j] = estilo[roda];
-      }
-      if (selecao === 'tamanho') {
-        roda = aleatorio(3);
-        array[j] = tamanho[roda];
-      }
-      if (selecao === 'rotacao') {
-        roda = aleatorio(2);
-        array[j] = rotacao[roda];
-      }
-      if (selecao === 'inclinacao') {
-        roda = aleatorio(2);
-        array[j] = inclinacao[roda];
-      }
-      if (selecao === 'estilo') {
-        console.log('Estilo');
-      }
-      // console.log('j = ', j);
-      // console.log('selecao = ', selecao);
     }
-    // console.log('rodei');
     selecionaPalavra.className = `${array[0]} ${array[1]}`;
-    selecao = '';
+    estilizador = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
   }
-  // console.log('saí');
 }
 
 function separaPalavras() {
