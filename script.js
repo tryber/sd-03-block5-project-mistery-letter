@@ -20,7 +20,6 @@ window.onload = function() {
       p.appendChild(span)
       let cont = document.getElementsByClassName("contador")[0];
       cont.innerHTML = arrayText.length;
-    
     }; 
   };
   
