@@ -5,6 +5,7 @@ window.onload = function() {
   arrayStyle = ["newspaper", "magazine1", "magazine2"];
   arrayTam = ["medium", "big", "reallybig"];
   arrayDegree = ["skewleft", "skewright"];
+  arrayRot = ["rotateleft", "rotateright"]
   
   function createArray() {
     let arrayText = inputText.value.split(" ");
@@ -17,6 +18,7 @@ window.onload = function() {
       span.classList.add(arrayStyle[Math.floor(Math.random() * arrayStyle.length)]);
       span.classList.add(arrayTam[Math.floor(Math.random() * arrayTam.length)]);
       span.classList.add(arrayDegree[Math.floor(Math.random() * arrayDegree.length)])
+      span.classList.add(arrayRot[Math.floor(Math.random() * arrayRot.length)])
       p.appendChild(span)
       let cont = document.getElementsByClassName("contador")[0];
       cont.innerHTML = arrayText.length;
@@ -31,7 +33,7 @@ window.onload = function() {
         document.getElementsByTagName("span")[j].classList.add(arrayStyle[Math.floor(Math.random() * arrayStyle.length)]);
         document.getElementsByTagName("span")[j].classList.add(arrayTam[Math.floor(Math.random() * arrayTam.length)]);
         document.getElementsByTagName("span")[j].classList.add(arrayDegree[Math.floor(Math.random() * arrayDegree.length)]);
-
+        document.getElementsByTagName("span")[j].classList.add(arrayRot[Math.floor(Math.random() * arrayRot.length)]);
       })
     };
   }
