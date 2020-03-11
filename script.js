@@ -10,6 +10,7 @@ window.onload = function() {
     let arrayText = inputText.value.split(" ");
     console.log(arrayText);
     let p = document.getElementsByClassName("mistery")[0];
+    p.innerHTML = "";
     for(let i = 0; i < arrayText.length; i++) {
       let span = document.createElement("SPAN");
       span.innerHTML = arrayText[i]
