@@ -13,6 +13,7 @@ function divideString() {
   const areaCarta = document.getElementById('carta-gerada');
   const arr = frase.split(' ');
   contador.textContent = arr.length;
+  areaCarta.textContent = '';
   for (let i = 0; i < arr.length; i += 1){
     const palavra = document.createElement('span');
     palavra.addEventListener('click', selectEstilo);
