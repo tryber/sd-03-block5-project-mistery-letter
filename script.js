@@ -1,5 +1,6 @@
 // Get variables
 const createButton = document.getElementById('criar-carta');
+const getCarta = document.querySelectorAll('span').length;
 
 function estilo() {
   const classes = ['newspaper', 'magazine1', 'magazine2'];
@@ -38,6 +39,9 @@ function alterarClasses() {
 
 function createLetter() {
   const separadas = document.getElementById('carta-texto').value.split(' ');
+  if (document.querySelectorAll('span').length > 0) {
+    document.querySelectorAll('#carta-gerada')[0].innerHTML = '';
+  }
   for (let i = 0; i < separadas.length; i += 1) {
     const createSpan = document.createElement('span');
     const cartaGerada = document.getElementById('carta-gerada');
