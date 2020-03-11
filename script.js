@@ -28,9 +28,11 @@ window.onload = function() {
     let arrayText = inputText.value.split(" ");
     for(let j = 0; j < arrayText.length; j++) {
       document.getElementsByTagName("span")[j].addEventListener("click", function() {
+        document.getElementsByTagName("span")[j].classList = "";
         document.getElementsByTagName("span")[j].classList.add(arrayStyle[Math.floor(Math.random() * arrayStyle.length)]);
         document.getElementsByTagName("span")[j].classList.add(arrayTam[Math.floor(Math.random() * arrayTam.length)]);
-        document.getElementsByTagName("span")[j].classList.add(arrayDegree[Math.floor(Math.random() * arrayDegree.length)])
+        document.getElementsByTagName("span")[j].classList.add(arrayDegree[Math.floor(Math.random() * arrayDegree.length)]);
+
       })
     };
   }
