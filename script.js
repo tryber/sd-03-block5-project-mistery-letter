@@ -16,8 +16,8 @@ botao.addEventListener('click', function criarCarta() {
     carta.appendChild(span);
     span.innerText = fraseSplit[i];
     
-    const gp = Math.floor(Math.random() * 3);
-    const cl = Math.floor(Math.random() * 2);
+    const gp = Math.floor(Math.random() * 4);
+    const cl = Math.floor(Math.random() * 3);
     span.classList.add(grupos[gp][cl]);
   }
 });
