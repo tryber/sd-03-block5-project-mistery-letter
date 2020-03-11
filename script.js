@@ -37,6 +37,12 @@ function alterarClasses() {
   this.classList.add(estilo(), tamanho(), rotacao(), inclinacao());
 }
 
+function contadorDePalavras() {
+  document.querySelector(
+    '#carta-contador'
+  ).innerHTML = document.querySelectorAll('span').length;
+}
+
 function createLetter() {
   const separadas = document.getElementById('carta-texto').value.split(' ');
   if (document.querySelectorAll('span').length > 0) {
@@ -50,8 +56,11 @@ function createLetter() {
     createSpan.classList.add(estilo(), tamanho(), rotacao(), inclinacao());
   }
   for (let i = 0; i < document.querySelectorAll('span').length; i += 1) {
-    document.querySelectorAll('span')[i].addEventListener('click', alterarClasses)
+    document
+      .querySelectorAll('span')
+      [i].addEventListener('click', alterarClasses);
   }
+  contadorDePalavras();
 }
 
 // Event listeners
