@@ -4,6 +4,7 @@ const cartaContador = document.getElementById('carta-contador');
 const array = [''];
 let roda;
 let n = 10;
+let estilizador = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
 
 const aleatorio = function (alea) {
   const numero = parseInt(Math.random() * alea, 10);
@@ -11,11 +12,10 @@ const aleatorio = function (alea) {
 };
 
 function estilizaPalavra(tl) {
-  let estilizador = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
   for (let i = 0; i < tl; i += 1) {
     const selecionaPalavra = document.getElementsByTagName('span')[i];
 
-    for (let j = 0; j < 2; j +=1) {
+    for (let j = 0; j < 2; j += 1) {
       roda = aleatorio(n);
 
       if (estilizador[roda] === 'newspaper' || estilizador[roda] === 'magazine1' || estilizador[roda] === 'magazine2') {
