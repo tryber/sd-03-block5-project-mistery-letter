@@ -72,7 +72,8 @@ function separaPalavras() {
     conteudo.removeChild(conteudo.firstElementChild);
   }
   
-  const paragrafo = document.createElement('p.carta-gerada');
+  const paragrafo = document.createElement('p');
+  paragrafo.id = 'carta-gerada';
   
   for (let i = 0; i < textLength; i++) {
     paragrafo.innerHTML += `<span>${palavraPorPalavra[i]}`;
