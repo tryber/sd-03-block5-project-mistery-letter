@@ -31,6 +31,11 @@ function inclinacao() {
   return resultArray.join(',').replace(/,/g, " ");
 }*/
 
+function alterarClasses() {
+  this.className = '';
+  this.classList.add(estilo(), tamanho(), rotacao(), inclinacao());
+}
+
 function createLetter() {
   const separadas = document.getElementById('carta-texto').value.split(' ');
   for (let i = 0; i < separadas.length; i += 1) {
@@ -39,6 +44,9 @@ function createLetter() {
     createSpan.innerHTML = separadas[i];
     cartaGerada.appendChild(createSpan);
     createSpan.classList.add(estilo(), tamanho(), rotacao(), inclinacao());
+  }
+  for (let i = 0; i < document.querySelectorAll('span').length; i += 1) {
+    document.querySelectorAll('span')[i].addEventListener('click', alterarClasses)
   }
 }
 
