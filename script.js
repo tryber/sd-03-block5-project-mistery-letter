@@ -1,6 +1,5 @@
 const botaoCarta = document.getElementById('criar-carta');
 const textoCarta = document.getElementById('carta-texto');
-const cartaGerada = document.getElementById('carta-gerada');
 const cartaContador = document.getElementById('carta-contador');
 let roda;
 const array = [''];
@@ -54,26 +53,33 @@ function estilizaPalavra(tl) {
       if (selecao === 'estilo') {
         console.log('Estilo');
       }
-      console.log('j = ', j);
-      console.log('selecao = ', selecao);
+      // console.log('j = ', j);
+      // console.log('selecao = ', selecao);
     }
-    //console.log('rodei');
+    // console.log('rodei');
     selecionaPalavra.className = `${array[0]} ${array[1]}`;
     selecao = '';
   }
-  console.log('saí');
+  // console.log('saí');
 }
 
 function separaPalavras() {
   const palavraPorPalavra = textoCarta.value.split(' ');
   const textLength = palavraPorPalavra.length;
-  const cl = palavraPorPalavra.length;
-  for (let i = 0; i < textLength; i++) {
-    cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]}`;
+  const conteudo = document.getElementsByClassName('conteudo')[0]; 
+
+  if (conteudo.firstElementChild) {
+    conteudo.removeChild(conteudo.firstElementChild);
   }
+  
+  const paragrafo = document.createElement('p.carta-gerada');
+  
+  for (let i = 0; i < textLength; i++) {
+    paragrafo.innerHTML += `<span>${palavraPorPalavra[i]}`;
+  }
+  conteudo.appendChild(paragrafo);
   cartaContador.innerHTML = `${textLength}`;
   estilizaPalavra(textLength);
-  //estilizaPalavra(textLength,1);
 }
 
 botaoCarta.addEventListener('click', separaPalavras);
