@@ -4,48 +4,76 @@ const cartaGerada = document.getElementById('carta-gerada');
 const cartaContador = document.getElementById('carta-contador');
 let roda;
 const array = [''];
+let selecao = '';
+const classesAdicionadas = 2;
 
-const aleatorio = function () {
-  const numero = parseInt(Math.random() * 9, 10);
+const aleatorio = function (alea) {
+  const numero = parseInt(Math.random() * alea, 10);
   return numero;
 };
 
 function estilizaPalavra(tl) {
-  let estilo = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
-  for (let i = 0; i < tl; i += 1) {
+  const estilo = ['newspaper', 'magazine1', 'magazine2'];
+  const tamanho = ['medium', 'big', 'reallybig'];
+  const rotacao = ['rotateleft', 'rotateright'];
+  const inclinacao = ['skewleft', 'skewright'];
+  
+  for (let i = 0; i < tl; i++){
     const selecionaPalavra = document.getElementsByTagName('span')[i];
-    roda = aleatorio();
-    array[0] = estilo[roda];
-    if (roda === 0 || roda === 1 || roda === 2) {
-      while (roda <= 2) {
-        roda = aleatorio();
+    for (let j = 0; j < 2; j++) {
+      roda = aleatorio(3);
+      if (roda === 0) {
+        selecao = 'estilo';
       }
-    } else if (roda === 3 || roda === 4 || roda === 5) {
-      while (roda >= 3 && roda <= 5) {
-        roda = aleatorio();
+      if (roda === 1) {
+        selecao = 'tamanho';
       }
-    } else if (roda === 6 || roda === 7) {
-      while (roda > 5 && roda < 8) {
-        roda = aleatorio();
+      if (roda === 2) {
+        selecao = 'rotacao';
       }
-    } else if (roda === 8 || roda === 9) {
-      while (roda > 7 && roda < 10) {
-        roda = aleatorio();
+      if (roda === 3) {
+        selecao = 'inclinacao';
       }
+  
+      if (selecao === 'estilo') {
+        roda = aleatorio(3);
+        array[j] = estilo[roda];
+      }
+      if (selecao === 'tamanho') {
+        roda = aleatorio(3);
+        array[j] = tamanho[roda];
+      }
+      if (selecao === 'rotacao') {
+        roda = aleatorio(2);
+        array[j] = rotacao[roda];
+      }
+      if (selecao === 'inclinacao') {
+        roda = aleatorio(2);
+        array[j] = inclinacao[roda];
+      }
+      if (selecao === 'estilo') {
+        console.log('Estilo');
+      }
+      console.log('j = ', j);
+      console.log('selecao = ', selecao);
     }
-    array[1] = estilo[roda];
+    //console.log('rodei');
     selecionaPalavra.className = `${array[0]} ${array[1]}`;
+    selecao = '';
   }
+  console.log('saí');
 }
 
 function separaPalavras() {
   const palavraPorPalavra = textoCarta.value.split(' ');
   const textLength = palavraPorPalavra.length;
-  for (let i = 0; i < textLength; i += 1) {
+  const cl = palavraPorPalavra.length;
+  for (let i = 0; i < textLength; i++) {
     cartaGerada.innerHTML += `<span>${palavraPorPalavra[i]}`;
   }
   cartaContador.innerHTML = `${textLength}`;
   estilizaPalavra(textLength);
+  //estilizaPalavra(textLength,1);
 }
 
 botaoCarta.addEventListener('click', separaPalavras);
