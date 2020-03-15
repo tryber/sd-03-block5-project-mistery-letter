@@ -56,11 +56,11 @@ span {
 
 body {
   background-color: mintcream;
-  font-family: 'Courier New', Courier, monospace ;
+  font-family: Courier New, Courier, monospace ;
 }
 
 .main {
-  background-color: rgb(190, 211, 199);
+  background-color: rgb(190 , 211 , 199);
   border: 2px solid oldlace;
 }
 
@@ -85,14 +85,14 @@ body {
   text-align: center;
 }
 
-.button #criar-carta, .button #limpa-carta {
+.button .button1 , .button .button2 {
   background-color: mintcream;
   border: 1px solid oldlace;
   border-radius: 4px;
   margin-right: 5px;
 }
 
-.button #criar-carta:hover, .button #limpa-carta:hover {
+.button .button1:hover , .button .button2:hover {
   background-color: transparent;
   border: 1px solid transparent;
 }
@@ -102,7 +102,7 @@ body {
   word-break: break-all;
 }
 
-.paragraph #carta-gerada {
+.paragraph .p1 {
   line-height: 80px;
 }
 
@@ -113,10 +113,10 @@ body {
 }
 
 a {
-  color: rgb(190, 211, 199);
+  color: rgb(190 , 211 , 199);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(190, 211, 199, 0.5);
+  color: rgba(190 , 211 , 199 , 0.5);
 }
