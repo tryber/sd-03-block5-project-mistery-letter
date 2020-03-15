@@ -7,13 +7,23 @@
     <title>Mistery Letter</title>
 </head>
 <body>
-    <form>
-        <input id="carta-texto">
-    </form>
-    <button id="criar-carta">Gerar carta!</button>
-    <button id="limpa-carta">Limpar carta</button>
-    <p id="carta-gerada"></p>
-    <p id="carta-contador"></p>
+    <div class="main">
+        <h1 class="title">Carta Misteriosa</h1>
+        <form class="form">
+            <input id="carta-texto" placeholder="Digite uma frase">
+        </form>
+        <div class="button">
+            <button id="criar-carta">Gerar carta!</button>
+            <button id="limpa-carta">Limpar carta</button>
+        </div>
+        <div class="paragraph">
+            <p id="carta-gerada"></p>
+            <p id="carta-contador"></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Página desenvolvida por <a href="https://gomesanac.github.io/" target="_blank">Ana Carolina Gomes</a> em Março de 2020.</p>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

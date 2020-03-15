@@ -46,7 +46,7 @@ function addCarta() {
   contador.innerHTML = '';
   const arrayCarta = inputCarta.value.split(' ');
   criaSpan(arrayCarta);
-  contador.innerHTML = arrayCarta.length;
+  contador.innerHTML = `Total de palavras: ${arrayCarta.length}`;
   for (let j = 0; j < arrayCarta.length; j += 1) {
     novaClasse(j);
   }
